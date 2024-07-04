@@ -3,8 +3,8 @@ import 'package:ppob_app/custom_widget/buttoncustom.dart';
 import 'package:ppob_app/custom_widget/textfiledcustom.dart';
 import 'package:ppob_app/custom_widget/widgetbayar.dart';
 
-class BayarToken1 extends StatelessWidget {
-  const BayarToken1({super.key});
+class BayarToken3 extends StatelessWidget {
+  const BayarToken3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,8 @@ class BayarToken1 extends StatelessWidget {
       body: Column(
         children: [
           const TextFiledCustom(text: "IDPEL / NOMOR METER"),
-          const KotakBayar(text1: "Nominal 50.000", text2: "Token Listrik Rp. 50.000", text3: "Rp. 52.000",),
+          const KotakBayar(text1: "Nominal 70.000", text2: "Token Listrik Rp. 70.000", text3: "Rp. 72.000",),
+          const SizedBox(height: 438,),
           ButtonCustom(text: "BAYAR", onPressed: (){})
         ],
       ),

@@ -12,51 +12,77 @@ class Home extends StatelessWidget {
         title: const Text("PPOB APP"),
         backgroundColor: Colors.orange,
       ),
-      body: 
-      Container(
+      body: Stack(
+        children: [
+          Container(
             height: 50,
             width: 400,
             decoration: const BoxDecoration(
               color: Colors.orange,
-      
             ),
-            child:Column(
-        children: [
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 50,
-                  width: 150,
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const Cek();
-                        }));
-                      },
-                      child:const Center(child: Text("Token Listrik"))),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                SizedBox(
-                  height: 50,
-                  width: 150,
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const CekTagihan();
-                        }));
-                      },
-                      child: const Center(child: Text("Tagihan Listrik"))),
-                )
-              ],
-            ),
-        ],
-      ) ,
           ),
+          Positioned(
+            top: 25,
+            left: 25,
+            child: Container(
+              height: 80,
+              width: 300,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.15),
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              SizedBox(height: 130,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 50,
+                    width: 150,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                            return const Cek();
+                          }),
+                        );
+                      },
+                      child: const Center(child: Text("Token Listrik")),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    height: 50,
+                    width: 150,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                            return const CekTagihan();
+                          }),
+                        );
+                      },
+                      child: const Center(child: Text("Tagihan Listrik")),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
