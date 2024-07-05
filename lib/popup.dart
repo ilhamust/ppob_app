@@ -45,9 +45,9 @@ class PopUp extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5))),
                         onPressed: () {
                           Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const TransaksiSelesai();
-                        }));
+                              MaterialPageRoute(builder: (context) {
+                            return const TransaksiSelesai();
+                          }));
                         },
                         child: const Center(
                           child: Column(

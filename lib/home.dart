@@ -10,9 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          style: TextStyle(color: Colors.white),
-          "PPOB APP"),
+        title: const Text(style: TextStyle(color: Colors.white), "PPOB APP"),
         backgroundColor: Colors.orange,
       ),
       body: Stack(
@@ -43,55 +41,59 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-           Column(
+          Column(
             children: [
-              SizedBox(height: 95,),
+              const SizedBox(
+                height: 95,
+              ),
               Padding(
-                padding: EdgeInsets.all(25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CustomCard(text: "Token Listrik", imagePath: "assets/images/token.png", onPressed: (){
-                       Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) {
-              return const Cek();
-            }),
-          );
-                    },),
-                    SizedBox(
+                    CustomCard(
+                      text: "Token Listrik",
+                      imagePath: "assets/images/token.png",
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return const Cek();
+                          }),
+                        );
+                      },
+                    ),
+                    const SizedBox(
                       width: 10,
                     ),
-                    CustomCard(text: "Tagihan Listrik", imagePath: "assets/images/tagihan.png", onPressed: (){
-                       Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) {
-              return const CekTagihan();
-            }),
-          );
-                    }, )
-                    
+                    CustomCard(
+                      text: "Tagihan Listrik",
+                      imagePath: "assets/images/tagihan.png",
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return const CekTagihan();
+                          }),
+                        );
+                      },
+                    )
                   ],
                 ),
               ),
-
             ],
-            
           ),
         ],
       ),
       bottomNavigationBar: Container(
         height: 70,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-                    color: Colors.black.withOpacity(0.15),
-                    blurRadius: 7,
-                    offset: const Offset(5, 0),
-                  ),
-          ]
-        ),
+        decoration: BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.15),
+            blurRadius: 7,
+            offset: const Offset(5, 0),
+          ),
+        ]),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45),
           child: Row(
@@ -101,11 +103,8 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    onPressed: (){},
-                    icon: const Icon(
-                      size: 30,
-                      Icons.home),
-                    
+                    onPressed: () {},
+                    icon: const Icon(size: 30, Icons.home),
                   ),
                   const Text("Home"),
                 ],
@@ -113,11 +112,8 @@ class Home extends StatelessWidget {
               Column(
                 children: [
                   IconButton(
-                    onPressed: (){},
-                    icon: const Icon(
-                      size: 30,
-                      Icons.history),
-                    
+                    onPressed: () {},
+                    icon: const Icon(size: 30, Icons.history),
                   ),
                   const Text("History"),
                 ],
@@ -125,16 +121,12 @@ class Home extends StatelessWidget {
               Column(
                 children: [
                   IconButton(
-                    onPressed: (){},
-                    icon: const Icon(
-                      size: 30,
-                      Icons.person),
-                    
+                    onPressed: () {},
+                    icon: const Icon(size: 30, Icons.person),
                   ),
                   const Text("Profil")
                 ],
               ),
-          
             ],
           ),
         ),

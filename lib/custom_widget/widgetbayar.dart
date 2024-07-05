@@ -3,13 +3,13 @@ import 'package:ppob_app/token_listrik/listharga.dart';
 
 class KotakBayar extends StatelessWidget {
   const KotakBayar({
-    Key? key,
+    super.key,
     required this.text1,
     required this.text2,
     required this.text3,
     this.height = 100,
     this.width = 400,
-  }) : super(key: key);
+  });
 
   final String text1;
   final String text2;
@@ -24,18 +24,18 @@ class KotakBayar extends StatelessWidget {
       child: Container(
         height: height,
         width: width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
         ),
         child: Padding(
           padding: const EdgeInsets.all(11.0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start, 
-                mainAxisAlignment: MainAxisAlignment.start, 
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     text1,
@@ -50,7 +50,7 @@ class KotakBayar extends StatelessWidget {
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     text3,
                     style: const TextStyle(
@@ -73,7 +73,7 @@ class KotakBayar extends StatelessWidget {
                         }),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       "UBAH",
                       style: TextStyle(color: Colors.orange),
                     ),

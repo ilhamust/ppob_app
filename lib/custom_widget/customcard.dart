@@ -34,7 +34,7 @@ class CustomCard extends StatelessWidget {
               Image.asset(width: 50, imagePath),
               Text(
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                   text),
             ],
           ),

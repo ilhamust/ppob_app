@@ -42,12 +42,16 @@ class ListHarga extends StatelessWidget {
                     Text(
                       text1,
                       style: const TextStyle(
-                          fontSize: 19, fontWeight: FontWeight.w400, color: Colors.black),
+                          fontSize: 19,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black),
                     ),
                     Text(
                       text3,
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
                     ),
                   ],
                 ),

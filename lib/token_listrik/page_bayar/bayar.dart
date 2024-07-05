@@ -13,23 +13,30 @@ class BayarToken1 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         title: const Text(
-          style: TextStyle(
-            color: Colors.white,
-          ),
-          "TOKEN LISTRIK"),
-           iconTheme: const IconThemeData(color: Colors.white),
+            style: TextStyle(
+              color: Colors.white,
+            ),
+            "TOKEN LISTRIK"),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Column(
         children: [
           const TextFiledCustom(text: "IDPEL / NOMOR METER"),
-          const KotakBayar(text1: "Nominal 20.000", text2: "Token Listrik Rp. 20.000", text3: "Rp. 22.000",),
-          const SizedBox(height: 438,),
-          ButtonCustom(text: "BAYAR", onPressed: (){
-            Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const PopUp();
-                        }));
-          })
+          const KotakBayar(
+            text1: "Nominal 20.000",
+            text2: "Token Listrik Rp. 20.000",
+            text3: "Rp. 22.000",
+          ),
+          const SizedBox(
+            height: 438,
+          ),
+          ButtonCustom(
+              text: "BAYAR",
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const PopUp();
+                }));
+              })
         ],
       ),
     );

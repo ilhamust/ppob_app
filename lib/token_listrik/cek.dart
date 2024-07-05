@@ -12,22 +12,25 @@ class Cek extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         title: const Text(
-          style: TextStyle(
-            color: Colors.white,
-          ),
-          "TOKEN LISTRIK"),
-           iconTheme: const IconThemeData(color: Colors.white),
+            style: TextStyle(
+              color: Colors.white,
+            ),
+            "TOKEN LISTRIK"),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Column(
         children: [
           const TextFiledCustom(text: "IDPEL / NOMOR METER"),
-          const SizedBox(height: 20,),
-          ButtonCustom(text: "CEK", onPressed: (){
-            Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const ListHargaToken();
-                        }));
-          })
+          const SizedBox(
+            height: 20,
+          ),
+          ButtonCustom(
+              text: "CEK",
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ListHargaToken();
+                }));
+              })
         ],
       ),
     );

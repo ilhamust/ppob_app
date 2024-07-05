@@ -8,26 +8,29 @@ class CekTagihan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
         title: const Text(
-          style: TextStyle(
-            color: Colors.white,
-          ),
-          "TOKEN LISTRIK"),
-           iconTheme: const IconThemeData(color: Colors.white),
+            style: TextStyle(
+              color: Colors.white,
+            ),
+            "TOKEN LISTRIK"),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Column(
         children: [
           const TextFiledCustom(text: "IDPEL"),
-          const SizedBox(height: 20,),
-          ButtonCustom(text: "CEK TAGIHAN", onPressed: (){
-            Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const BayarTagihan();
-                        }));
-          })
+          const SizedBox(
+            height: 20,
+          ),
+          ButtonCustom(
+              text: "CEK TAGIHAN",
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const BayarTagihan();
+                }));
+              })
         ],
       ),
     );

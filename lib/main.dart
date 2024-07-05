@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ppob_app/custom_widget/buttoncustom.dart';
-import 'package:ppob_app/custom_widget/harga.dart';
-import 'package:ppob_app/custom_widget/textfiledcustom.dart';
 import 'package:ppob_app/home.dart';
 
 void main() {
@@ -14,13 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:Home() //const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home:const Home() //const MyHomePage(title: 'Flutter Demo Home Page'),
+        );
   }
 }
 
